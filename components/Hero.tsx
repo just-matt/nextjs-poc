@@ -15,6 +15,7 @@ export default function Hero({
         <div className="hero__content">
           <h1>{headline}</h1>
           <p>{intro}</p>
+          <a href="#" className="c-button c-button--blue">Find out more</a>
         </div>
 
         <div
