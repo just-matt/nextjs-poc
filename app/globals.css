@@ -1,0 +1,319 @@
+@import "tailwindcss";
+
+/* ========================================
+   BASE
+======================================== */
+
+body {
+  background: #fff;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrap {
+  width: 1260px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ========================================
+   TOP BAR
+======================================== */
+
+.c-top-bar {
+  padding: 13.5px 0;
+  background: #003d4c;
+}
+
+.c-header-navigation__list {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.c-header-navigation__item {
+  margin: 0;
+  padding: 0;
+}
+
+.c-header-navigation__link {
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+
+  transition: opacity 0.2s ease;
+}
+
+.c-header-navigation__link:hover {
+  opacity: 0.8;
+}
+
+/* ========================================
+   LANGUAGE SWITCHER
+======================================== */
+
+.c-language-switcher {
+  background: transparent;
+  border: 0;
+
+  color: #fff !important;
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.c-language-switcher option {
+  color: #fff !important;
+}
+
+/* ========================================
+   AUTH
+======================================== */
+
+.c-top-bar__auth,
+.c-login-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 13.5px;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.c-button:hover {
+  opacity: 0.9;
+}
+
+.c-button--blue {
+  color: #fff;
+  background: #00b5d9;
+}
+
+.c-button--outline-white {
+  color: #fff;
+  background: transparent;
+
+  border: 2px solid #fff;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 27px 0;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo img {
+  display: block;
+
+  width: 180px;
+  height: auto;
+}
+
+/* ========================================
+   MAIN NAVIGATION
+======================================== */
+
+.c-main-navigation {
+  margin-left: auto;
+}
+
+.c-main-navigation__list {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.c-main-navigation__link {
+  color: #333;
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+
+  text-decoration: none;
+}
+
+.c-main-navigation__link:hover {
+  color: #006b82;
+}
+
+/* ========================================
+   SEARCH
+======================================== */
+
+.c-header-search {
+  margin-left: 48px;
+}
+
+.c-header-search__wrapper {
+  display: flex;
+}
+
+.c-header-search__input {
+  width: 180px;
+  height: 50px;
+
+  padding: 0 13.5px;
+
+  background: #e7ebeb;
+
+  border: 0;
+  border-radius: 8px 0 0 8px;
+  outline: 0;
+
+  font-size: 15px;
+}
+
+.c-header-search__button {
+  width: 80px;
+
+  color: #fff;
+  background: #003d4c;
+
+  border: 0;
+  border-radius: 0 8px 8px 0;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.c-header-search__button:hover {
+  background: #00566a;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+#hero {
+  margin: 0;
+  padding: 0;
+}
+
+#hero .wrap {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  min-height: 580px;
+
+  background: #000;
+  color: #fff;
+
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+
+  width: 50%;
+  flex: 1;
+
+  padding: 36px;
+}
+
+.hero__content h1 {
+  margin-bottom: 20px;
+
+  color: #fff;
+
+  font-size: 56px;
+  line-height: 1.1;
+}
+
+.hero__content p {
+  color: #fff;
+
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+}
+
+.hero__image::before {
+  content: "";
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+.u-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  overflow: hidden;
+
+  clip-path: inset(50%);
+}
