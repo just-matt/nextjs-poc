@@ -16,9 +16,9 @@ export default function Home() {
       />
 
       <main>
-        <section className="c-products">
-          <div className="wrap">
-            <div className="c-products__grid">
+        <section className="py-[60px]">
+          <div className="w-full max-w-[1260px] mx-auto px-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-5 lg:gap-[30px] w-full">
               <Card
                 title="Mastersizer 3000+"
                 imageUrl="https://dam.malvernpanalytical.com/16ac0676-a947-4397-9170-b0fb00a0135c/Mastersizer-Mastersizer_%2b_Hydro_EV_%2b_Hydro_MV_%2b_Aero_S_%2b_Low_Angle_1_011_HydrInsight_Original%20file.png"

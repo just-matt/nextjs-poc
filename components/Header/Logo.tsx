@@ -4,8 +4,8 @@ type LogoProps = {
 
 export default function Logo({ url }: LogoProps) {
   return (
-    <div className="logo">
-      <img id="logo" src={url} alt="Logo" />
+    <div className="flex-shrink-0">
+      <img id="logo" src={url} alt="Logo" className="w-[180px] h-auto" />
     </div>
   );
 }
