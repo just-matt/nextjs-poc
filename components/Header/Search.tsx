@@ -1,6 +1,6 @@
 export default function Search() {
   return (
-    <form className="ml-[48px]">
+    <form className="ml-[48px] hidden md:block">
       <div className="flex">
         <label
           htmlFor="header-search"

@@ -12,7 +12,7 @@ export default function Hero({
   return (
     <section className="m-0">
       <div className="w-full max-w-[1260px] mx-auto px-5">
-        <div className="relative flex items-center gap-[60px] min-h-[580px] bg-black text-white rounded-lg overflow-hidden flex-col md:flex-row md:min-h-[580px] md:gap-[60px]">
+        <div className="relative flex items-center gap-[60px] min-h-[auto] md:min-h-[580px] bg-black text-white rounded-lg overflow-hidden flex-col md:flex-row md:min-h-[580px] md:gap-[60px]">
           <div className="relative z-10 flex-[0_0_100%] md:flex-[0_0_50%] p-[36px]">
             <h1 className="mb-5 text-white text-[56px] leading-[1.1]">{headline}</h1>
             <p className="text-white text-[20px] leading-[1.6] mb-[13.5px]">{intro}</p>
