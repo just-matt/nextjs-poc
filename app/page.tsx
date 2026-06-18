@@ -3,17 +3,39 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { Card } from "@/components/Card";
 import { products } from "@/lib/products";
+import { getUmbracoHome } from "@/lib/umbraco";
 
-export default function Home() {
+export default async function Home() {
+  let heroData = {
+    headline: "Advanced Materials Characterisation",
+    intro: "Helping scientists and engineers understand the materials that shape our world.",
+    imageUrl: "https://dam.malvernpanalytical.com/4fe5121c-e734-4a53-9448-ada40097b76d/637316985638840907DJ_Original%20file.jpg",
+  };
+
+  try {
+    const home = await getUmbracoHome();
+    if (home) {
+      heroData = {
+        headline: home.properties.heroTitle,
+        intro: home.properties.heroIntro,
+        imageUrl: home.properties.heroImage[0]?.url
+          ? `https://barnowl.euwest01.umbraco.io${home.properties.heroImage[0].url}`
+          : heroData.imageUrl,
+      };
+    }
+  } catch (error) {
+    console.error("Failed to fetch home data from Umbraco:", error);
+  }
+
   return (
     <>
       <TopBar />
       <Header />
-      
+
       <Hero
-        headline="Advanced Materials Characterisation"
-        intro="Helping scientists and engineers understand the materials that shape our world."
-        imageUrl="https://dam.malvernpanalytical.com/4fe5121c-e734-4a53-9448-ada40097b76d/637316985638840907DJ_Original%20file.jpg"
+        headline={heroData.headline}
+        intro={heroData.intro}
+        imageUrl={heroData.imageUrl}
       />
 
       <main>
