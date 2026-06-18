@@ -40,7 +40,7 @@ export default function MobileMenu() {
                 <p className="text-[12px] font-semibold text-gray-400 uppercase tracking-wide mb-4">Main Navigation</p>
                 <ul className="flex flex-col gap-4 m-0 p-0 list-none">
                   <li className="m-0 p-0">
-                    <a href="#" onClick={() => setIsOpen(false)} className="text-[#333] text-[16px] font-semibold no-underline hover:text-[#006b82] transition-colors">
+                    <a href="/products" onClick={() => setIsOpen(false)} className="text-[#333] text-[16px] font-semibold no-underline hover:text-[#006b82] transition-colors">
                       Products
                     </a>
                   </li>
