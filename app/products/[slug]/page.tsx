@@ -2,6 +2,27 @@ import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import { products } from "@/lib/products";
 
+interface SpecificationItem {
+  label: string;
+  value: string;
+}
+
+interface SpecificationTab {
+  tabTitle: string;
+  items: SpecificationItem[];
+}
+
+interface Product {
+  id: string;
+  slug: string;
+  title: string;
+  imageUrl: string;
+  description: string;
+  longDescription: string;
+  showOnHomepage?: boolean;
+  specifications?: SpecificationTab[];
+}
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -17,7 +38,7 @@ export default async function ProductPage({
 }) {
   const { slug } = await params;
 
-  const product = products.find((p) => p.slug === slug);
+  const product = products.find((p) => p.slug === slug) as Product | undefined;
 
   if (!product) {
     return (
@@ -75,6 +96,31 @@ export default async function ProductPage({
           </div>
         </div>
       </section>
+
+      {product.specifications && Array.isArray(product.specifications) && product.specifications.length > 0 && (
+        <section className="py-[60px] px-5 bg-[#f5f5f5]">
+          <div className="w-full max-w-[1260px] mx-auto">
+            <h2 className="text-[36px] font-bold text-[#003d4c] mb-6">Specifications</h2>
+            {(product.specifications as SpecificationTab[]).map((tab, tabIndex) => (
+              <div key={tabIndex} className="mb-8">
+                <h3 className="text-[20px] font-semibold text-[#003d4c] mb-4">{tab.tabTitle}</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse">
+                    <tbody>
+                      {tab.items.map((spec, specIndex) => (
+                        <tr key={specIndex} className="border-b border-gray-300">
+                          <td className="py-3 px-4 font-semibold text-[#003d4c] bg-white w-[250px]">{spec.label}</td>
+                          <td className="py-3 px-4 text-[#333] bg-white">{spec.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
     </>
   );
 }

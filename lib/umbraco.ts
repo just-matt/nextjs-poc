@@ -13,6 +13,8 @@ export interface UmbracoProduct {
       url: string;
       name: string;
     }>;
+    showOnHomepage?: boolean;
+    specifications?: string;
   };
   route: {
     path: string;

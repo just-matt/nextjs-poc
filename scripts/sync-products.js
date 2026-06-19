@@ -44,6 +44,24 @@ function mapUmbracoProduct(product) {
     imageUrl = `${UMBRACO_BASE}${imageUrl}`;
   }
 
+  // Parse specifications from nested structure with tabs
+  let specifications = [];
+  if (product.properties.specifications?.items && Array.isArray(product.properties.specifications.items)) {
+    specifications = product.properties.specifications.items.map((tab) => {
+      const tabTitle = tab.content?.properties?.tabTitle || 'Specifications';
+      const rows = tab.content?.properties?.rows?.items || [];
+      const items = rows.map((row) => ({
+        label: row.content?.properties?.label || '',
+        value: row.content?.properties?.value || '',
+      })).filter((spec) => spec.label || spec.value);
+
+      return {
+        tabTitle,
+        items,
+      };
+    }).filter((tab) => tab.items.length > 0);
+  }
+
   return {
     id: product.id,
     slug,
@@ -51,6 +69,8 @@ function mapUmbracoProduct(product) {
     imageUrl,
     description: product.properties.shortDescription || '',
     longDescription: product.properties.longDescription || '',
+    showOnHomepage: product.properties.showOnHomepage || false,
+    specifications: specifications,
   };
 }
 

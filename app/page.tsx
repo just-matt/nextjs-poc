@@ -42,15 +42,17 @@ export default async function Home() {
         <section className="py-[60px]">
           <div className="w-full max-w-[1260px] mx-auto px-5">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-5 lg:gap-[30px] w-full">
-              {products.slice(0, 3).map((product) => (
-                <Card
-                  key={product.slug}
-                  title={product.title}
-                  imageUrl={product.imageUrl}
-                  description={product.description}
-                  slug={product.slug}
-                />
-              ))}
+              {products
+                .filter((product) => product.showOnHomepage !== false)
+                .map((product) => (
+                  <Card
+                    key={product.slug}
+                    title={product.title}
+                    imageUrl={product.imageUrl}
+                    description={product.description}
+                    slug={product.slug}
+                  />
+                ))}
             </div>
           </div>
         </section>
