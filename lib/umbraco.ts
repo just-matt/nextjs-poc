@@ -15,6 +15,11 @@ export interface UmbracoProduct {
     }>;
     showOnHomepage?: boolean;
     specifications?: string;
+    badge?: {
+      displayOn?: string[];
+      text?: string;
+      style?: string;
+    };
   };
   route: {
     path: string;

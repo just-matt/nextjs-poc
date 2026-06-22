@@ -5,6 +5,19 @@ import { Card } from "@/components/Card";
 import { products } from "@/lib/products";
 import { getUmbracoHome } from "@/lib/umbraco";
 
+interface Product {
+  slug: string;
+  title: string;
+  imageUrl: string;
+  description: string;
+  showOnHomepage?: boolean;
+  badge?: {
+    text: string;
+    style: 'light' | 'dark' | 'petrol';
+    displayOn: string[];
+  } | null;
+}
+
 export default async function Home() {
   let heroData = {
     headline: "Advanced Materials Characterisation",
@@ -42,7 +55,7 @@ export default async function Home() {
         <section className="py-[60px]">
           <div className="w-full max-w-[1260px] mx-auto px-5">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-5 lg:gap-[30px] w-full">
-              {products
+              {(products as Product[])
                 .filter((product) => product.showOnHomepage !== false)
                 .map((product) => (
                   <Card
@@ -51,6 +64,8 @@ export default async function Home() {
                     imageUrl={product.imageUrl}
                     description={product.description}
                     slug={product.slug}
+                    badge={product.badge}
+                    pageType="homepage"
                   />
                 ))}
             </div>

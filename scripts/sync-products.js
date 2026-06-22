@@ -62,6 +62,13 @@ function mapUmbracoProduct(product) {
     }).filter((tab) => tab.items.length > 0);
   }
 
+  // Parse badge data - fields are at root level: text, style, location
+  const badgeData = product.properties.text ? {
+    text: product.properties.text,
+    style: (product.properties.style || 'light').toLowerCase(),
+    displayOn: product.properties.location || [],
+  } : null;
+
   return {
     id: product.id,
     slug,
@@ -71,6 +78,7 @@ function mapUmbracoProduct(product) {
     longDescription: product.properties.longDescription || '',
     showOnHomepage: product.properties.showOnHomepage || false,
     specifications: specifications,
+    badge: badgeData,
   };
 }
 

@@ -1,5 +1,55 @@
 export const products = [
   {
+    "id": "fab7ebf4-b607-4ff9-888f-60087651d438",
+    "slug": "empyrean",
+    "title": "Empyrean ",
+    "imageUrl": "https://barnowl.euwest01.umbraco.io/media/4andbktg/pn11525_003_frkl_original-file.webp",
+    "description": "Multipurpose X-ray diffractometers",
+    "longDescription": "With the Empyrean, Malvern Panalytical has set the new standard in developing the ultimate X-ray platform for the analysis of powders, thin films, nanomaterials and solid objects.",
+    "showOnHomepage": false,
+    "specifications": [],
+    "badge": null
+  },
+  {
+    "id": "52f16763-c333-4282-9ba5-e7651b4d2f82",
+    "slug": "aeris",
+    "title": "Aeris",
+    "imageUrl": "https://barnowl.euwest01.umbraco.io/media/4atiobsq/pn13616_aeris_badging_13596_dsc_2023_02_14_14_09_35-1_new_badge_original-file.webp",
+    "description": "Compact benchtop X-ray diffractometers",
+    "longDescription": "Prepare to be surprised by our highly accurate, fast XRD system: Aeris. Precise results can be ready in less than five minutes. Such rapid acquisition of high-quality data has only been previously achieved by large, floorstanding xrd systems. The compact Aeris is small, powerful, and the first of its kind. ",
+    "showOnHomepage": false,
+    "specifications": [],
+    "badge": null
+  },
+  {
+    "id": "59d36345-c06a-4da4-9f2e-57d853ffc468",
+    "slug": "epsilon",
+    "title": "Epsilon",
+    "imageUrl": "https://barnowl.euwest01.umbraco.io/media/jd0ansht/pn11053_004_original-file-1.webp",
+    "description": "EDXRF benchtop and on-line spectrometers",
+    "longDescription": "The Epsilon range of XRF analyzers are an ideal analytical solution. They are capable of simple element identification and quantification up to more sophisticated analysis. They are easy to operate, compact and X-ray safe instruments without the need for additional chemicals or operating gasses. ",
+    "showOnHomepage": false,
+    "specifications": [],
+    "badge": null
+  },
+  {
+    "id": "1fff18dc-f68c-4495-ad3d-e8e1c3f45573",
+    "slug": "zetium",
+    "title": "Zetium",
+    "imageUrl": "https://barnowl.euwest01.umbraco.io/media/f1wkgkmr/l06_pn9600_031_with_mod_frkl_small_knob_original-file.webp",
+    "description": "The industrial benchmark in WDXRF spectroscopy",
+    "longDescription": "Zetium is the most advanced WDXRF (Wavelength Dispersive X-ray Fluorescence) spectrometer available. It provides unmatched sensitivity and resolution for elemental analysis in a wide range of materials and applications.",
+    "showOnHomepage": true,
+    "specifications": [],
+    "badge": {
+      "text": "Product",
+      "style": "light",
+      "displayOn": [
+        "Homepage"
+      ]
+    }
+  },
+  {
     "id": "c096d2dc-a544-4aff-b1ba-ed09a3197196",
     "slug": "zetasizer-advance",
     "title": "Zetasizer Advance",
@@ -7,7 +57,14 @@ export const products = [
     "description": "Light Scattering for every application",
     "longDescription": "The Zetasizer Advance combines dynamic light scattering (DLS), electrophoretic light scattering (ELS), and static light scattering (SLS) in a single instrument for comprehensive particle characterization.",
     "showOnHomepage": true,
-    "specifications": []
+    "specifications": [],
+    "badge": {
+      "text": "Promotion",
+      "style": "dark",
+      "displayOn": [
+        "Homepage"
+      ]
+    }
   },
   {
     "id": "8067a1c3-b670-4673-a4e9-f679fc8750b5",
@@ -57,46 +114,15 @@ export const products = [
           }
         ]
       }
-    ]
-  },
-  {
-    "id": "fab7ebf4-b607-4ff9-888f-60087651d438",
-    "slug": "empyrean",
-    "title": "Empyrean ",
-    "imageUrl": "https://barnowl.euwest01.umbraco.io/media/4andbktg/pn11525_003_frkl_original-file.webp",
-    "description": "Multipurpose X-ray diffractometers",
-    "longDescription": "With the Empyrean, Malvern Panalytical has set the new standard in developing the ultimate X-ray platform for the analysis of powders, thin films, nanomaterials and solid objects.",
-    "showOnHomepage": false,
-    "specifications": []
-  },
-  {
-    "id": "52f16763-c333-4282-9ba5-e7651b4d2f82",
-    "slug": "aeris",
-    "title": "Aeris",
-    "imageUrl": "https://barnowl.euwest01.umbraco.io/media/4atiobsq/pn13616_aeris_badging_13596_dsc_2023_02_14_14_09_35-1_new_badge_original-file.webp",
-    "description": "Compact benchtop X-ray diffractometers",
-    "longDescription": "Prepare to be surprised by our highly accurate, fast XRD system: Aeris. Precise results can be ready in less than five minutes. Such rapid acquisition of high-quality data has only been previously achieved by large, floorstanding xrd systems. The compact Aeris is small, powerful, and the first of its kind. ",
-    "showOnHomepage": false,
-    "specifications": []
-  },
-  {
-    "id": "1fff18dc-f68c-4495-ad3d-e8e1c3f45573",
-    "slug": "zetium",
-    "title": "Zetium",
-    "imageUrl": "https://barnowl.euwest01.umbraco.io/media/f1wkgkmr/l06_pn9600_031_with_mod_frkl_small_knob_original-file.webp",
-    "description": "The industrial benchmark in WDXRF spectroscopy",
-    "longDescription": "Zetium is the most advanced WDXRF (Wavelength Dispersive X-ray Fluorescence) spectrometer available. It provides unmatched sensitivity and resolution for elemental analysis in a wide range of materials and applications.",
-    "showOnHomepage": true,
-    "specifications": []
-  },
-  {
-    "id": "59d36345-c06a-4da4-9f2e-57d853ffc468",
-    "slug": "epsilon",
-    "title": "Epsilon",
-    "imageUrl": "https://barnowl.euwest01.umbraco.io/media/jd0ansht/pn11053_004_original-file-1.webp",
-    "description": "EDXRF benchtop and on-line spectrometers",
-    "longDescription": "The Epsilon range of XRF analyzers are an ideal analytical solution. They are capable of simple element identification and quantification up to more sophisticated analysis. They are easy to operate, compact and X-ray safe instruments without the need for additional chemicals or operating gasses. ",
-    "showOnHomepage": false,
-    "specifications": []
+    ],
+    "badge": {
+      "text": "New Model",
+      "style": "petrol",
+      "displayOn": [
+        "Homepage",
+        "Product Listing",
+        "Product Details"
+      ]
+    }
   }
 ];

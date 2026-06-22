@@ -12,6 +12,12 @@ interface SpecificationTab {
   items: SpecificationItem[];
 }
 
+interface Badge {
+  text: string;
+  style: 'light' | 'dark' | 'petrol';
+  displayOn: string[];
+}
+
 interface Product {
   id: string;
   slug: string;
@@ -21,7 +27,14 @@ interface Product {
   longDescription: string;
   showOnHomepage?: boolean;
   specifications?: SpecificationTab[];
+  badge?: Badge | null;
 }
+
+const badgeStyles = {
+  light: 'bg-white text-[#333] border-[#333]',
+  dark: 'bg-[#333] text-white border-[#333]',
+  petrol: 'bg-[#003d4c] text-white border-[#003d4c]',
+};
 
 export const dynamicParams = false;
 
@@ -74,6 +87,11 @@ export default async function ProductPage({
 
             {/* Content */}
             <div>
+              {product.badge && product.badge.displayOn.includes('Product Details') && (
+                <div className={`inline-flex px-3 py-1 rounded-full text-[12px] font-semibold border mb-4 ${badgeStyles[product.badge.style]}`}>
+                  {product.badge.text}
+                </div>
+              )}
               <h1 className="text-[48px] font-bold text-[#003d4c] mb-4">
                 {product.title}
               </h1>
