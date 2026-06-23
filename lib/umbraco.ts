@@ -20,6 +20,22 @@ export interface UmbracoProduct {
       text?: string;
       style?: string;
     };
+    pageBody?: {
+      items: Array<{
+        content: {
+          properties: {
+            heading: string;
+            content: {
+              markup: string;
+            };
+            image: Array<{
+              url: string;
+            }>;
+            imagePosition: 'Left' | 'Right';
+          };
+        };
+      }>;
+    };
   };
   route: {
     path: string;

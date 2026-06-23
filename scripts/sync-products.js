@@ -69,6 +69,19 @@ function mapUmbracoProduct(product) {
     displayOn: product.properties.location || [],
   } : null;
 
+  // Parse page body content blocks
+  let pageBody = [];
+  if (product.properties.pageBody?.items) {
+    pageBody = product.properties.pageBody.items.map((item) => ({
+      heading: item.content?.properties?.heading || '',
+      content: item.content?.properties?.content?.markup || '',
+      imageUrl: item.content?.properties?.image?.[0]?.url
+        ? `${UMBRACO_BASE}${item.content.properties.image[0].url}`
+        : '',
+      imagePosition: item.content?.properties?.imagePosition || 'Left',
+    }));
+  }
+
   return {
     id: product.id,
     slug,
@@ -79,6 +92,7 @@ function mapUmbracoProduct(product) {
     showOnHomepage: product.properties.showOnHomepage || false,
     specifications: specifications,
     badge: badgeData,
+    pageBody: pageBody,
   };
 }
 

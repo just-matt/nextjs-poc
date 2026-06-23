@@ -1,5 +1,6 @@
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
+import PageBody from "@/components/PageBody";
 import { products } from "@/lib/products";
 
 interface SpecificationItem {
@@ -18,6 +19,13 @@ interface Badge {
   displayOn: string[];
 }
 
+interface PageBodyBlock {
+  heading: string;
+  content: string;
+  imageUrl: string;
+  imagePosition: 'Left' | 'Right';
+}
+
 interface Product {
   id: string;
   slug: string;
@@ -28,6 +36,7 @@ interface Product {
   showOnHomepage?: boolean;
   specifications?: SpecificationTab[];
   badge?: Badge | null;
+  pageBody?: PageBodyBlock[];
 }
 
 const badgeStyles = {
@@ -114,6 +123,10 @@ export default async function ProductPage({
           </div>
         </div>
       </section>
+
+      {product.pageBody && product.pageBody.length > 0 && (
+        <PageBody blocks={product.pageBody} />
+      )}
 
       {product.specifications && Array.isArray(product.specifications) && product.specifications.length > 0 && (
         <section className="py-[60px] px-5 bg-[#f5f5f5]">

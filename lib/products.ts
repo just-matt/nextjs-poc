@@ -8,7 +8,8 @@ export const products = [
     "longDescription": "With the Empyrean, Malvern Panalytical has set the new standard in developing the ultimate X-ray platform for the analysis of powders, thin films, nanomaterials and solid objects.",
     "showOnHomepage": false,
     "specifications": [],
-    "badge": null
+    "badge": null,
+    "pageBody": []
   },
   {
     "id": "52f16763-c333-4282-9ba5-e7651b4d2f82",
@@ -19,7 +20,8 @@ export const products = [
     "longDescription": "Prepare to be surprised by our highly accurate, fast XRD system: Aeris. Precise results can be ready in less than five minutes. Such rapid acquisition of high-quality data has only been previously achieved by large, floorstanding xrd systems. The compact Aeris is small, powerful, and the first of its kind. ",
     "showOnHomepage": false,
     "specifications": [],
-    "badge": null
+    "badge": null,
+    "pageBody": []
   },
   {
     "id": "59d36345-c06a-4da4-9f2e-57d853ffc468",
@@ -30,7 +32,8 @@ export const products = [
     "longDescription": "The Epsilon range of XRF analyzers are an ideal analytical solution. They are capable of simple element identification and quantification up to more sophisticated analysis. They are easy to operate, compact and X-ray safe instruments without the need for additional chemicals or operating gasses. ",
     "showOnHomepage": false,
     "specifications": [],
-    "badge": null
+    "badge": null,
+    "pageBody": []
   },
   {
     "id": "1fff18dc-f68c-4495-ad3d-e8e1c3f45573",
@@ -47,7 +50,8 @@ export const products = [
       "displayOn": [
         "Homepage"
       ]
-    }
+    },
+    "pageBody": []
   },
   {
     "id": "c096d2dc-a544-4aff-b1ba-ed09a3197196",
@@ -64,7 +68,8 @@ export const products = [
       "displayOn": [
         "Homepage"
       ]
-    }
+    },
+    "pageBody": []
   },
   {
     "id": "8067a1c3-b670-4673-a4e9-f679fc8750b5",
@@ -123,6 +128,20 @@ export const products = [
         "Product Listing",
         "Product Details"
       ]
-    }
+    },
+    "pageBody": [
+      {
+        "heading": "Integer a urna aliquet",
+        "content": "<p>Vestibulum velit lectus, rutrum a volutpat quis, hendrerit non purus. Quisque urna nunc, sagittis varius egestas at, condimentum eu nulla. Vestibulum nec molestie nisl. Phasellus consectetur a massa ac suscipit. Integer a urna aliquet, feugiat nisi ut, molestie mauris. Suspendisse nec facilisis enim. Duis et gravida justo, ac dictum ante.</p>",
+        "imageUrl": "https://barnowl.euwest01.umbraco.io/media/ln2f2hqr/mastersizer-mastersizer_plus_hydro_ev_plus_hydro_mv_plus_aero_s_plus_low_angle_1_011_hydrinsight_original-file.webp",
+        "imagePosition": "Left"
+      },
+      {
+        "heading": "Suspendisse nec facilisis enim",
+        "content": "<p>Quisque urna nunc, sagittis varius egestas at, condimentum eu nulla. Vestibulum nec molestie nisl. Phasellus consectetur a massa ac suscipit. Integer a urna aliquet, feugiat nisi ut, molestie mauris. Vestibulum velit lectus, rutrum a volutpat quis, hendrerit non purus.</p>",
+        "imageUrl": "https://barnowl.euwest01.umbraco.io/media/ln2f2hqr/mastersizer-mastersizer_plus_hydro_ev_plus_hydro_mv_plus_aero_s_plus_low_angle_1_011_hydrinsight_original-file.webp",
+        "imagePosition": "Right"
+      }
+    ]
   }
 ];
