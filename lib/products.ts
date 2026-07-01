@@ -54,24 +54,6 @@ export const products = [
     "pageBody": []
   },
   {
-    "id": "c096d2dc-a544-4aff-b1ba-ed09a3197196",
-    "slug": "zetasizer-advance",
-    "title": "Zetasizer Advance",
-    "imageUrl": "https://barnowl.euwest01.umbraco.io/media/yxzbl532/frkl-zetasizer-advance-side-view-transparent_original-file.webp",
-    "description": "Light Scattering for every application",
-    "longDescription": "The Zetasizer Advance combines dynamic light scattering (DLS), electrophoretic light scattering (ELS), and static light scattering (SLS) in a single instrument for comprehensive particle characterization.",
-    "showOnHomepage": true,
-    "specifications": [],
-    "badge": {
-      "text": "Promotion",
-      "style": "dark",
-      "displayOn": [
-        "Homepage"
-      ]
-    },
-    "pageBody": []
-  },
-  {
     "id": "8067a1c3-b670-4673-a4e9-f679fc8750b5",
     "slug": "mastersizer-3000plus",
     "title": "Mastersizer 3000+",
@@ -140,6 +122,49 @@ export const products = [
         "heading": "Suspendisse nec facilisis enim",
         "content": "<p>Quisque urna nunc, sagittis varius egestas at, condimentum eu nulla. Vestibulum nec molestie nisl. Phasellus consectetur a massa ac suscipit. Integer a urna aliquet, feugiat nisi ut, molestie mauris. Vestibulum velit lectus, rutrum a volutpat quis, hendrerit non purus.</p>",
         "imageUrl": "https://barnowl.euwest01.umbraco.io/media/ln2f2hqr/mastersizer-mastersizer_plus_hydro_ev_plus_hydro_mv_plus_aero_s_plus_low_angle_1_011_hydrinsight_original-file.webp",
+        "imagePosition": "Right"
+      }
+    ]
+  },
+  {
+    "id": "c096d2dc-a544-4aff-b1ba-ed09a3197196",
+    "slug": "zetasizer-advance",
+    "title": "Zetasizer Advance",
+    "imageUrl": "https://barnowl.euwest01.umbraco.io/media/yxzbl532/frkl-zetasizer-advance-side-view-transparent_original-file.webp",
+    "description": "Light Scattering for every application",
+    "longDescription": "The Zetasizer Advance combines dynamic light scattering (DLS), electrophoretic light scattering (ELS), and static light scattering (SLS) in a single instrument for comprehensive particle characterization.",
+    "showOnHomepage": true,
+    "specifications": [
+      {
+        "tabTitle": "General",
+        "items": [
+          {
+            "label": "Dimensions",
+            "value": "690mm x 300mm x 450mm"
+          },
+          {
+            "label": "Weight",
+            "value": "30kg"
+          },
+          {
+            "label": "Technology",
+            "value": "Laser light scattering"
+          }
+        ]
+      }
+    ],
+    "badge": {
+      "text": "Promotion",
+      "style": "dark",
+      "displayOn": [
+        "Homepage"
+      ]
+    },
+    "pageBody": [
+      {
+        "heading": "Suspendisse nec facilisis enim",
+        "content": "<p>Quisque urna nunc, sagittis varius egestas at, condimentum eu nulla. Vestibulum nec molestie nisl. Phasellus consectetur a massa ac suscipit. Integer a urna aliquet, feugiat nisi ut, molestie mauris. Vestibulum velit lectus, rutrum a volutpat quis, hendrerit non purus.</p>",
+        "imageUrl": "https://barnowl.euwest01.umbraco.io/media/yxzbl532/frkl-zetasizer-advance-side-view-transparent_original-file.webp",
         "imagePosition": "Right"
       }
     ]
